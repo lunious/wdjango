@@ -44,6 +44,6 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='goodsinfo',
             name='gtype',
-            field=models.ForeignKey(on_delete=False, to='w_goods.TypeInfo'),
+            field=models.ForeignKey(on_delete=False, to='goods.TypeInfo'),
         ),
     ]
