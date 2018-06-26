@@ -17,7 +17,7 @@ class Migration(migrations.Migration):
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
                 ('gtitle', models.CharField(max_length=20)),
-                ('gpic', models.ImageField(upload_to='w_goods')),
+                ('gpic', models.ImageField(upload_to='goods')),
                 ('gprice', models.DecimalField(decimal_places=2, max_digits=5)),
                 ('isDelete', models.BooleanField(default=False)),
                 ('gunit', models.CharField(max_length=20)),

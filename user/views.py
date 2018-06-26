@@ -9,7 +9,7 @@ from django.http import HttpResponseRedirect
 
 # 注册页面
 def register(request):
-    return render(request, 'w_user/register.html')
+    return render(request, 'user/register.html')
 
 
 def register_handle(request):
@@ -21,7 +21,7 @@ def register_handle(request):
     uemail = post.get('email')
     # 判断两次密码是否相等
     if upwd1 != upwd2:  # 两次密码不一致
-        return redirect('w_user/register/')
+        return redirect('user/register/')
     # 密码加密
     s1 = sha1()
     s1.update(upwd1.encode("latin1"))
@@ -33,14 +33,14 @@ def register_handle(request):
     user.uemail = uemail
     user.save()
     # 注册成功，转到登录页面
-    return redirect('/w_user/login/')
+    return redirect('/user/login/')
 
 
 # 登录页面
 def login(request):
     uname = request.COOKIES.get('uname', '')
     context = {'title': '用户登录', 'error_name': 0, 'error_pwd': 0, 'uname': uname}
-    return render(request, 'w_user/login.html', context)
+    return render(request, 'user/login.html', context)
 
 
 def login_handle(request):
@@ -56,7 +56,7 @@ def login_handle(request):
         s1 = sha1()
         s1.update(upwd.encode("latin1"))
         if s1.hexdigest() == users[0].upwd:
-            red = HttpResponseRedirect('/w_user/info/')
+            red = HttpResponseRedirect('/user/info/')
             # 记住用户名
             if jizhu != 0:
                 red.set_cookie('uname', uname)
@@ -67,10 +67,10 @@ def login_handle(request):
             return red
         else:
             context = {'title': '用户登录', 'error_name': 0, 'error_pwd': 1, 'uname': uname, 'upwd': upwd}
-            return render(request, 'w_user/login.html', context)
+            return render(request, 'user/login.html', context)
     else:
         context = {'title': '用户登录', 'error_name': 1, 'error_pwd': 0, 'uname': uname, 'upwd': upwd}
-        return render(request, 'w_user/login.html', context)
+        return render(request, 'user/login.html', context)
 
 
 # 用户中心
@@ -78,4 +78,4 @@ def info(request):
     users = UserInfo.objects.filter(id=request.session['user_id'])[0]
     user_email = users.uemail
     context = {'title': '用户中心', 'user_email': user_email, 'user_name': request.session['user_name']}
-    return render(request, 'w_user/user_center_info.html', context)
+    return render(request, 'user/user_center_info.html', context)
