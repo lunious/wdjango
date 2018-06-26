@@ -1,3 +1,4 @@
+# coding = utf -8
 """
 Django settings for wdjango project.
 
@@ -37,6 +38,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'w_user',
+    'w_goods',
+    'tinymce',
 ]
 
 MIDDLEWARE = [
@@ -122,3 +125,13 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, 'static')
 ]
+# 开发阶段上传文件目录
+MEDIA_ROOT = os.path.join(BASE_DIR, 'static')
+# 部署阶段上传文件目录
+# MEDIA_ROOT = '/var/www/wdjango/static'
+
+TINYMCE_DEFAULT_CONFIG = {
+    'theme': 'advanced',
+    'width': 600,
+    'height': 400,
+}
