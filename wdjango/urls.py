@@ -21,4 +21,6 @@ urlpatterns = [
     path('user/', include('user.urls')),
     path('tinymce/', include('tinymce.urls')),
     path('', include('wapi.urls')),
+    path('api/', include('rest_framework.urls', namespace='rest_framework')),
 ]
+

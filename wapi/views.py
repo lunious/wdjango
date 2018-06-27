@@ -1,58 +1,38 @@
-from django.shortcuts import render
-from django.http import HttpResponse, JsonResponse
-from rest_framework.response import Response
-from django.views.decorators.csrf import csrf_exempt
-from rest_framework.renderers import JSONRenderer
-from rest_framework import status
-from rest_framework.decorators import api_view
-from rest_framework.parsers import JSONParser
 from wapi.models import testApi
-from wapi.serializers import SnippetSerializer
-from rest_framework.permissions import AllowAny
-from rest_framework.decorators import api_view, permission_classes
+from wapi.serializers import SnippetSerializer, UserSerializer
+from django.contrib.auth.models import User
+from rest_framework import permissions
+from wapi.permissions import IsOwnerOrReadOnly
+from rest_framework.response import Response
+from rest_framework import renderers
+from rest_framework import viewsets
+from rest_framework.decorators import action
 
 
-@api_view(['GET', 'POST'])
-@permission_classes((AllowAny, ))
-def snippet_list(request, format=None):
+class SnippetViewSet(viewsets.ModelViewSet):
     """
-    List all code snippets, or create a new snippet.
+    This viewset automatically provides `list`, `create`, `retrieve`,
+    `update` and `destroy` actions.
+
+    Additionally we also provide an extra `highlight` action.
     """
-    if request.method == 'GET':
-        snippets = testApi.objects.all()
-        serializer = SnippetSerializer(snippets, many=True)
-        return Response(serializer.data)
+    queryset = testApi.objects.all()
+    serializer_class = SnippetSerializer
+    permission_classes = (permissions.IsAuthenticatedOrReadOnly,
+                          IsOwnerOrReadOnly,)
 
-    elif request.method == 'POST':
-        serializer = SnippetSerializer(data=request.data)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data, status=status.HTTP_201_CREATED)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+    @action(detail=True, renderer_classes=[renderers.StaticHTMLRenderer])
+    def highlight(self, request, *args, **kwargs):
+        snippet = self.get_object()
+        return Response(snippet.highlighted)
+
+    def perform_create(self, serializer):
+        serializer.save(owner=self.request.user)
 
 
-@api_view(['GET', 'PUT', 'DELETE'])
-@permission_classes((AllowAny, ))
-def snippet_detail(request, pk, format=None):
+class UserViewSet(viewsets.ReadOnlyModelViewSet):
     """
-    Retrieve, update or delete a code snippet.
+    This viewset automatically provides `list` and `detail` actions.
     """
-    try:
-        snippet = testApi.objects.get(pk=pk)
-    except testApi.DoesNotExist:
-        return Response(status=status.HTTP_404_NOT_FOUND)
-
-    if request.method == 'GET':
-        serializer = SnippetSerializer(snippet)
-        return Response(serializer.data)
-
-    elif request.method == 'PUT':
-        serializer = SnippetSerializer(snippet, data=request.data)
-        if serializer.is_valid():
-            serializer.save()
-            return Response(serializer.data)
-        return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
-
-    elif request.method == 'DELETE':
-        snippet.delete()
-        return Response(status=status.HTTP_204_NO_CONTENT)
+    queryset = User.objects.all()
+    serializer_class = UserSerializer
