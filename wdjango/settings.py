@@ -40,6 +40,8 @@ INSTALLED_APPS = [
     'user',
     'goods',
     'tinymce',
+    'wapi',
+    'rest_framework',
 ]
 
 MIDDLEWARE = [
@@ -134,4 +136,11 @@ TINYMCE_DEFAULT_CONFIG = {
     'theme': 'advanced',
     'width': 600,
     'height': 400,
+}
+REST_FRAMEWORK = {
+    # Use Django's standard `django.contrib.auth` permissions,
+    # or allow read-only access for unauthenticated users.
+    'DEFAULT_PERMISSION_CLASSES': [
+        'rest_framework.permissions.DjangoModelPermissionsOrAnonReadOnly'
+    ]
 }
