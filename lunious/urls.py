@@ -3,6 +3,6 @@ from lunious import views
 
 urlpatterns = [
     path('', views.index),
-    path('index_1/', views.index_1),
-    path('index_2/', views.index_2),
+    path('index1/', views.index1),
+    path('index2/', views.index2),
 ]
