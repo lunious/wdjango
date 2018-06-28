@@ -1,4 +1,4 @@
-from wapi.models import testApi
+from wapi.models import WdjangoApi
 from wapi.serializers import SnippetSerializer, UserSerializer
 from django.contrib.auth.models import User
 from rest_framework import permissions
@@ -16,7 +16,7 @@ class SnippetViewSet(viewsets.ModelViewSet):
 
     Additionally we also provide an extra `highlight` action.
     """
-    queryset = testApi.objects.all()
+    queryset = WdjangoApi.objects.all()
     serializer_class = SnippetSerializer
     permission_classes = (permissions.IsAuthenticatedOrReadOnly,
                           IsOwnerOrReadOnly,)

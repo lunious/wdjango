@@ -7,6 +7,10 @@ from django.http import HttpResponseRedirect
 
 # Create your views here.
 
+# 首页
+def index(request):
+    return render(request, 'user/index.html')
+
 # 注册页面
 def register(request):
     return render(request, 'user/register.html')

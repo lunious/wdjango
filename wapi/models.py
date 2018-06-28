@@ -9,7 +9,7 @@ LANGUAGE_CHOICES = sorted([(item[1][0], item[0]) for item in LEXERS])
 STYLE_CHOICES = sorted((item, item) for item in get_all_styles())
 
 
-class testApi(models.Model):
+class WdjangoApi(models.Model):
     created = models.DateTimeField(auto_now_add=True)
     title = models.CharField(max_length=100, blank=True, default='')
     code = models.TextField()
@@ -24,6 +24,7 @@ class testApi(models.Model):
 
     class Meta:
         ordering = ('created',)
+        db_table = 'wdjango_api'
 
     def save(self, *args, **kwargs):
         """
@@ -36,4 +37,4 @@ class testApi(models.Model):
         formatter = HtmlFormatter(
             style=self.style, linenos=linenos, full=True, **options)
         self.highlighted = highlight(self.code, lexer, formatter)
-        super(testApi, self).save(*args, **kwargs)
+        super(WdjangoApi, self).save(*args, **kwargs)

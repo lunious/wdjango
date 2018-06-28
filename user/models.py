@@ -15,4 +15,4 @@ class UserInfo(models.Model):
     # default,blank是python层面的约束，不影响数据库表结构，不需要重新迁移
 
     class Meta:
-        db_table = 'userinfo'
+        db_table = 'wdjango_user'

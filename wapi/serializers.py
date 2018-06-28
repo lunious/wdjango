@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from wapi.models import testApi
+from wapi.models import WdjangoApi
 from django.contrib.auth.models import User
 
 
@@ -8,7 +8,7 @@ class SnippetSerializer(serializers.ModelSerializer):
     highlight = serializers.HyperlinkedIdentityField(view_name='snippet-highlight', format='html')
 
     class Meta:
-        model = testApi
+        model = WdjangoApi
         fields = ('url', 'id', 'highlight', 'owner',
                   'title', 'code', 'linenos', 'language', 'style')
 
