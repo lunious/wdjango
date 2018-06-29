@@ -1,21 +1,15 @@
 from rest_framework import serializers
-from wapi.models import WdjangoApi
 from django.contrib.auth.models import User
-
-
-class SnippetSerializer(serializers.ModelSerializer):
-    owner = serializers.ReadOnlyField(source='owner.username')
-    highlight = serializers.HyperlinkedIdentityField(view_name='snippet-highlight', format='html')
-
-    class Meta:
-        model = WdjangoApi
-        fields = ('url', 'id', 'highlight', 'owner',
-                  'title', 'code', 'linenos', 'language', 'style')
+from .models import ScggjyList
 
 
 class UserSerializer(serializers.ModelSerializer):
-    wapi = serializers.HyperlinkedRelatedField(many=True, view_name='snippet-detail', read_only=True)
-
     class Meta:
         model = User
-        fields = ('url', 'id', 'username', 'wapi')
+        fields = ('id', 'username', 'email', 'url',)
+
+
+class ScggjySerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ScggjyList
+        fields = ('id', 'title', 'pubData', 'detailLink', 'detailTitle',)

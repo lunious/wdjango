@@ -4,9 +4,8 @@ from wapi import views
 
 # Create a router and register our viewsets with it.
 router = DefaultRouter()
-router.register(r'test', views.SnippetViewSet)
 router.register(r'users', views.UserViewSet)
-
+router.register(r'scggjyList', views.ScggjyViewSet)
 # The API URLs are now determined automatically by the router.
 urlpatterns = [
     url(r'^', include(router.urls))
