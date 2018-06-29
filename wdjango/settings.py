@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'qv(wp8hrp9fm&5+&x$l0niw_ajo#^pvzyf9d($x@x%6j04$7db'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 ALLOWED_HOSTS = ['*', ]
 
@@ -37,7 +37,6 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'tinymce',
     'wapi',
     'rest_framework',
     'lunious',
@@ -126,11 +125,11 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 # 部署阶段
-# STATIC_ROOT = os.path.join(BASE_DIR, 'static')
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 # 开发阶段
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, 'static')
-]
+# STATICFILES_DIRS = [
+#     os.path.join(BASE_DIR, 'static')
+# ]
 # 开发阶段上传文件目录
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
@@ -138,11 +137,6 @@ MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 # MEDIA_ROOT = '/var/www/wdjango/static'
 # STATIC_ROOT = '/var/www/wdjango/static'
 
-TINYMCE_DEFAULT_CONFIG = {
-    'theme': 'advanced',
-    'width': 600,
-    'height': 400,
-}
 REST_FRAMEWORK = {
     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
     'PAGE_SIZE': 10
