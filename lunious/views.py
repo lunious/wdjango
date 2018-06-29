@@ -5,7 +5,7 @@ from django.shortcuts import render
 
 # 首页
 def index(request):
-    return render(request, 'lunious/index1.html')
+    return render(request, 'lunious/index.html')
 
 
 # 首页_1
