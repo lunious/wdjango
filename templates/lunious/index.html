@@ -1,256 +1,672 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Lunious</title>
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <meta name="description" content="">
-    <meta name="keywords" content="">
-    <meta name="author" content="Tooplate">
-    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+    <title>Home</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="keywords" content=""/>
+    <script type="application/x-javascript"> addEventListener("load", function () {
+        setTimeout(hideURLbar, 0);
+    }, false);
 
-    <link rel="stylesheet" href="/static/lunious/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/static/lunious/css/animate.css">
-    <link rel="stylesheet" href="/static/lunious/css/magnific-popup.css">
-    <link rel="stylesheet" href="/static/lunious/css/font-awesome.min.css">
+    function hideURLbar() {
+        window.scrollTo(0, 1);
+    } </script>
+    <!-- bootstrap-css -->
+    <link href="/static/lunious/css/bootstrap.css" rel="stylesheet" type="text/css" media="all"/>
+    <!--// bootstrap-css -->
+    <!-- css -->
+    <link rel="stylesheet" href="/static/lunious/css/style.css" type="text/css" media="all"/>
+    <!--// css -->
+    <link rel="stylesheet" href="/static/lunious/css/owl.carousel.css" type="text/css" media="all">
+    <link href="/static/lunious/css/owl.theme.css" rel="stylesheet">
+    <link type="text/css" rel="stylesheet" href="/static/lunious/css/cm-overlay.css"/>
+    <!-- font-awesome icons -->
+    <link href="/static/lunious/css/font-awesome.css" rel="stylesheet">
+    <!-- //font-awesome icons -->
+    <!-- font -->
+    <link href="http://fonts.googleapis.com/css?family=Roboto+Slab:100,300,400,700" rel="stylesheet">
+    <link href='http://fonts.googleapis.com/css?family=Roboto+Condensed:400,700italic,700,400italic,300italic,300'
+          rel='stylesheet' type='text/css'>
+    <!-- //font -->
+    <script src="/static/lunious/js/jquery-1.11.1.min.js"></script>
+    <script src="/static/lunious/js/bootstrap.js"></script>
+    <!-- menu -->
+    <link rel="stylesheet" href="/static/lunious/css/main.css">
+    <script type="text/javascript" src="/static/lunious/js/main.js"></script>
+    <!-- //menu -->
+    <script>
+        $(document).ready(function () {
+            $("#owl-demo").owlCarousel({
 
-    <!-- Main css -->
-    <link rel="stylesheet" href="/static/lunious/css/tooplate-style.css">
+                autoPlay: 3000, //Set AutoPlay to 3 seconds
+                autoPlay: true,
+                items: 3,
+                itemsDesktop: [640, 5],
+                itemsDesktopSmall: [414, 4]
 
+            });
+
+        });
+    </script>
 </head>
-<body data-spy="scroll" data-target=".navbar-collapse" data-offset="50">
-
-<!-- PRE LOADER -->
-<div class="preloader">
-    <div class="spinner">
-        <span class="spinner-rotate"></span>
+<body>
+<!-- banner -->
+<div class="banner" id="home">
+    <!-- menu -->
+    <div id="toggle_m_nav">
+        <div id="m_nav_menu" class="m_nav">
+            <div class="m_nav_ham" id="m_ham_1"></div>
+            <div class="m_nav_ham" id="m_ham_2"></div>
+            <div class="m_nav_ham" id="m_ham_3"></div>
+        </div>
     </div>
-</div>
 
-
-<!-- HOME SECTION -->
-<div class="container">
-    <div class="row">
-        <section id="home" class="parallax-section">
-
-            <div class="col-md-offset-1 col-md-10 col-sm-12">
-                <div class="home-wrapper">
-                    <h3 class="wow fadeInUp" data-wow-delay="0.4s">Being an artist</h3>
-                    <h1 class="wow fadeInUp" data-wow-delay="0.6s">Art Studio from Asia passionated in creativity since
-                        2018</h1>
-                    <a href="#about" class="wow fadeInUp smoothScroll arrow-btn" data-wow-delay="1s"><i
-                            class="fa fa-angle-double-down"></i></a>
-                </div>
-            </div>
-
-        </section>
+    <div id="m_nav_container" class="m_nav">
+        <ul id="m_nav_list" class="m_nav">
+            <li class="m_nav_item" id="m_nav_item_1"><a href="#home">Home</a></li>
+            <li class="m_nav_item" id="moble_nav_item_2"><a href="#about">About</a></li>
+            <li class="m_nav_item" id="moble_nav_item_3"><a href="#statistics">Statistics</a></li>
+            <li class="m_nav_item" id="moble_nav_item_4"><a href="#experience">Experience</a></li>
+            <li class="m_nav_item" id="moble_nav_item_5"><a href="#projects">Projects</a></li>
+            <li class="m_nav_item" id="moble_nav_item_6"><a href="#contact">Contact</a></li>
+        </ul>
     </div>
-</div>
-
-
-<!-- ABOUT SECTION -->
-<section id="about" class="parallax-section">
+    <!-- menu -->
     <div class="container">
-        <div class="row">
-
-            <div class="col-md-4 col-sm-8">
-                <img src="/static/lunious/images/about-image.jpg" class="wow fadeInUp img-responsive"
-                     data-wow-delay="0.2s" alt="about image">
-                <div class="wow fadeInUp" data-wow-delay="0.4s">
-                    <h4>Interested to Work?</h4>
-                    <p>Sed varius augue nec pharetra scelerisque. Maecenas sapien ex, rutrum sit amet dapibus eu,
-                        tincidunt vitae nulla.</p>
-                    <a href="#">hello@company.com</a>
+        <div class="agile-logo">
+            <h1><a href="">Creative<span>Resume</span></a></h1>
+        </div>
+        <div class="w3l-banner-grids">
+            <div class="col-md-8 w3ls-banner-right">
+                <div class="banner-right-img">
+                    <img src="/static/lunious/images/1.jpg" alt=""/>
                 </div>
-            </div>
-
-            <div class="col-md-8 col-sm-12">
-                <div class="about-thumb">
-                    <div class="wow fadeInUp section-title" data-wow-delay="0.6s">
-                        <h3>we make things better</h3>
-                        <h2>Curabitur tristique ante non malesuada dignissim</h2>
-                    </div>
-                    <div class="wow fadeInUp" data-wow-delay="0.8s">
-                        <p>Credit goes to <a href="#"><b>Unsplash</b></a> for images used in this artist web page.
-                            Please tell your friends about <a rel="nofollow" href="#" target="_parent">Tooplate</a>
-                            website. You can feel free to use this template as you wish. Fusce quis fermentum enim, at
-                            rutrum enim. Sed tellus metus, laoreet eu turpis vel, sollicitudin feugiat libero. Ut ligula
-                            augue, condimentum a purus hendrerit, suscipit vehicula dui. Sed non purus purus. Mauris
-                            nunc lectus, porta pellentesque nisl nec, porttitor ultricies purus.</p>
+                <div class="banner-right-info">
+                    <h2>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent scelerisque tellus dignissim
+                        dolor dignissim, sit amet convallis nisi dignissim.</h2>
+                    <p>Donec dolor felis, consectetur eget massa non, mattis euismod est. Nam augue neque, hendrerit nec
+                        scelerisque non, ultrices at ligula. Praesent posuere, turpis eget lobortis elementum, ex ante
+                        ultricies ligula, sit amet varius lacus dui in magna. Aliquam erat volutpat. Nulla condimentum,
+                        enim vitae congue ultrices, nibh erat efficitur sem, vel iaculis lectus eros in turpis. Aliquam
+                        venenatis cursus suscipit.</p>
+                </div>
+                <div class="clearfix"></div>
+                <div class="w3-button">
+                    <div class="w3-button-info m_nav_item">
+                        <a class="hvr-sweep-to-bottom" href="#contact">Contact Me</a>
                     </div>
                 </div>
+                <div class="social-grids">
+                    <div class="social-info">
+                        <h4>Follow : </h4>
+                    </div>
+                    <div class="agileinfo-social-grids">
+                        <ul>
+                            <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+                            <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+                            <li><a href="#"><i class="fa fa-rss"></i></a></li>
+                            <li><a href="#"><i class="fa fa-vk"></i></a></li>
+                        </ul>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
             </div>
-
+            <div class="col-md-4 w3ls-banner-left">
+                <div class="w3ls-banner-left-info">
+                    <h4>Job Title</h4>
+                    <p>Full Stack Developer</p>
+                </div>
+                <div class="w3ls-banner-left-info">
+                    <h4>Name</h4>
+                    <p>Lunious</p>
+                </div>
+                <div class="w3ls-banner-left-info">
+                    <h4>Sex</h4>
+                    <p>Male</p>
+                </div>
+                <div class="w3ls-banner-left-info">
+                    <h4>Address</h4>
+                    <p>Shuimianqiao cross-street, wuhou district, chengdu city, sichuan province.</p>
+                </div>
+                <div class="w3ls-banner-left-info">
+                    <h4>Email Address</h4>
+                    <p><a href="mailto:example@email.com">lunious@163.com</a></p>
+                </div>
+            </div>
+            <div class="clearfix"></div>
         </div>
     </div>
-</section>
-<div class="tlinks">Collect from <a href="http://www.cssmoban.com/">网页模板</a></div>
-
-<!-- WORK SECTION -->
-<section id="work" class="parallax-section">
+</div>
+<!-- //banner -->
+<div class="tlinks">Collect from <a href="http://www.cssmoban.com/">lunious</a></div>
+<!-- about -->
+<div class="about" id="about">
     <div class="container">
-        <div class="row">
-
-            <div class="col-md-12 col-sm-12">
-                <!-- SECTION TITLE -->
-                <div class="wow fadeInUp section-title" data-wow-delay="0.2s">
-                    <h2>Work Collection</h2>
-                    <p>Morbi sit amet erat ullamcorper, varius erat at, vehicula massa. Phasellus vel vestibulum purus.
-                        Sed id sollicitudin ex, id eleifend purus. Nulla id fermentum nisl, vel tincidunt orci.
-                        Curabitur tristique ante non malesuada dignissim. Pellentesque id odio vitae enim efficitur
-                        ornare a non metus.</p>
+        <div class="wthree-about-grids">
+            <div class="col-md-6 wthree-about-left">
+                <h3>About Me</h3>
+                <h4>Mauris molestie ultrices molestie. Sed rhoncus interdum ipsum, id fermentum sem pellentesque
+                    ut.</h4>
+                <p>Praesent egestas egestas felis, sit amet posuere massa malesuada eget. Phasellus sem urna, euismod
+                    sit amet orci laoreet, laoreet molestie purus. Nulla leo purus, blandit nec efficitur tempor,
+                    interdum vel enim. <span>Proin mauris mi, lobortis quis quam at, tristique dictum arcu. In lobortis, massa in porta posuere, orci orci tincidunt risus, vitae ultrices enim eros vel lacus.</span>Lorem
+                    ipsum dolor sit amet, consectetur adipiscing elit. Praesent tincidunt tellus at est fermentum
+                    ultricies. Cras cursus semper libero. Vivamus non elit a diam elementum vulputate ac quis nisi.
+                    Suspendisse tellus massa, tempus in tristique a, eleifend non est. Duis consequat facilisis laoreet.
+                </p>
+            </div>
+            <div class="col-md-6 wthree-about-right">
+                <h3>Skills</h3>
+                <div class="skills-bar">
+                    <section class='bar'>
+                        <section class='wrap'>
+                            <div class='wrap_right'>
+                                <div class='bar_group'>
+                                    <div class='bar_group__bar thin' label='jQuery' show_values='true' tooltip='true'
+                                         value='343'></div>
+                                    <div class='bar_group__bar thin' label='AJAX' show_values='true' tooltip='true'
+                                         value='235'></div>
+                                    <div class='bar_group__bar thin' label='PHP' show_values='true' tooltip='true'
+                                         value='675'></div>
+                                    <div class='bar_group__bar thin' label='SASS' show_values='true' tooltip='true'
+                                         value='456'></div>
+                                    <div class='bar_group__bar thin' label='HTML' show_values='true' tooltip='true'
+                                         value='245'></div>
+                                </div>
+                            </div>
+                            <div class='clear'></div>
+                        </section>
+                    </section>
                 </div>
             </div>
-
-            <div class="wow fadeInUp col-md-3 col-sm-6" data-wow-delay="0.4s">
-                <!-- WORK THUMB -->
-                <div class="work-thumb">
-                    <a href="/static/lunious/images/work-1.jpg" class="image-popup">
-                        <img src="/static/lunious/images/work-1.jpg" class="img-responsive" alt="Fine Arts">
-                    </a>
-                </div>
-                <h4>Fine Arts</h4>
-            </div>
-
-            <div class="wow fadeInUp col-md-3 col-sm-6" data-wow-delay="0.6s">
-                <!-- WORK THUMB -->
-                <div class="work-thumb">
-                    <a href="/static/lunious/images/work-2.jpg" class="image-popup">
-                        <img src="/static/lunious/images/work-2.jpg" class="img-responsive" alt="Logo Design">
-                    </a>
-                </div>
-                <h4>Logo Design</h4>
-            </div>
-
-            <div class="wow fadeInUp col-md-3 col-sm-6" data-wow-delay="0.8s">
-                <!-- WORK THUMB -->
-                <div class="work-thumb">
-                    <a href="/static/lunious/images/work-3.jpg" class="image-popup">
-                        <img src="/static/lunious/images/work-3.jpg" class="img-responsive" alt="Photography">
-                    </a>
-                </div>
-                <h4>Photography</h4>
-            </div>
-
-            <div class="wow fadeInUp col-md-3 col-sm-6" data-wow-delay="0.8s">
-                <!-- WORK THUMB -->
-                <div class="work-thumb">
-                    <a href="/static/lunious/images/work-4.jpg" class="image-popup">
-                        <img src="/static/lunious/images/work-4.jpg" class="img-responsive" alt="Cinematography">
-                    </a>
-                </div>
-                <h4>Cinematography</h4>
-            </div>
-
+            <div class="clearfix"></div>
         </div>
     </div>
-</section>
-
-
-<!-- CONTACT SECTION -->
-<section id="contact" class="parallax-section">
+</div>
+<!-- //about -->
+<!-- statistics -->
+<div class="jarallax statistics" id="statistics">
     <div class="container">
-        <div class="row">
-
-            <div class="col-md-12 col-sm-12">
-                <!-- SECTION TITLE -->
-                <div class="wow fadeInUp section-title" data-wow-delay="0.2s">
-                    <h2>Get in touch</h2>
-                    <p>Quisque lobortis nibh eu nisi sodales gravida. Sed vehicula mauris in orci vehicula, at luctus
-                        mauris hendrerit. Fusce aliquet quis ante ac pretium. Donec quis nibh sed elit rhoncus
-                        condimentum.</p>
-                </div>
-            </div>
-
-            <div class="col-md-12 col-sm-12">
-                <!-- CONTACT FORM HERE -->
-                <div class="wow fadeInUp" data-wow-delay="0.6s">
-                    <form action="#" method="post" id="contact-form">
-                        <div class="col-md-6 col-sm-6">
-                            <input type="text" class="form-control" name="name" placeholder="Name">
-                        </div>
-                        <div class="col-md-6 col-sm-6">
-                            <input type="email" class="form-control" name="email" placeholder="Email">
-                        </div>
-                        <div class="col-md-12 col-sm-12">
-                            <textarea class="form-control" rows="5" name="message" placeholder="Message"></textarea>
-                        </div>
-                        <div class="col-md-offset-3 col-md-6 col-sm-offset-3 col-sm-6">
-                            <button id="submit" type="submit" class="form-control" value="send-mail" name="submit">Send
-                                Message
-                            </button>
-                        </div>
-                    </form>
-                </div>
-            </div>
-
+        <div class="w3-agileits-statistics-heading">
+            <h3>My Statistics</h3>
         </div>
+        <div class="agile-statistics-grids">
+            <div class="col-sm-4 agile-statistics-grid">
+                <h4>1024</h4>
+                <i class="fa fa-desktop" aria-hidden="true"></i>
+                <p>Projects Complete</p>
+            </div>
+            <div class="col-sm-4 agile-statistics-grid statistics-grid2">
+                <h4>2746</h4>
+                <i class="fa fa-user" aria-hidden="true"></i>
+                <p>Clients</p>
+            </div>
+            <div class="col-sm-4 agile-statistics-grid">
+                <h4>575</h4>
+                <i class="fa fa-trophy" aria-hidden="true"></i>
+                <p>Awards</p>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+        <script src="/static/lunious/js/jarallax.js"></script>
+        <script src="/static/lunious/js/SmoothScroll.min.js"></script>
+        <script type="text/javascript">
+            /* init Jarallax */
+            $('.jarallax').jarallax({
+                speed: 0.5,
+                imgWidth: 1366,
+                imgHeight: 768
+            })
+        </script>
     </div>
-</section>
-
-
-<!-- FOOTER SECTION -->
-<footer id="footer" class="parallax-section">
+</div>
+<!-- //statistics -->
+<!-- experience -->
+<div class="experience" id="experience">
     <div class="container">
-        <div class="row">
-
-            <div class="wow fadeInUp col-md-4 col-sm-4" data-wow-delay="0.2s">
-                <h4>Artist Digital Studio</h4>
-                <p>Curabitur quis volutpat elit. Proin sed sagittis arcu, non tristique libero. Quisque lobortis nibh eu
-                    nisi sodales gravida.</p>
-            </div>
-
-            <div class="wow fadeInUp col-md-4 col-sm-4" data-wow-delay="0.4s">
-                <div class="support-cus">
-                    <h4>Reach Out</h4>
-                    <p>456 Old Street, New City, ASIA</p>
+        <div class="w3-agileits-statistics-heading experience-heading">
+            <h3>Work Experience</h3>
+        </div>
+        <div class="w3-agile-experience-grids">
+            <div class="experience-top-grids">
+                <div class="col-md-6 experience-grid">
+                    <div class="experience-grid-icon icon-left hvr-radial-out">
+                        <i class="fa fa-folder-open" aria-hidden="true"></i>
+                    </div>
+                    <div class="experience-grid-info">
+                        <h5>Ut dapibus nisi turpis</h5>
+                        <p>Curabitur augue urna, venenatis vel enim at, sodales tempus diam. Aliquam ornare, magna a
+                            cursus tempus, arcu massa accumsan justo, non facilisis risus ante vel ex.</p>
+                    </div>
                 </div>
-                <div class="support-cus">
-                    <h4>Contact Info</h4>
-                    <p><a href="#">hello@company.com</a></p>
-                    <p>Tel: 010-020-0890</p>
+                <div class="col-md-6 experience-grid experience-grid1">
+                    <div class="experience-grid-icon icon-left hvr-radial-out">
+                        <i class="fa fa-bell" aria-hidden="true"></i>
+                    </div>
+                    <div class="experience-grid-info">
+                        <h5>Ut dapibus nisi turpis</h5>
+                        <p>Curabitur augue urna, venenatis vel enim at, sodales tempus diam. Aliquam ornare, magna a
+                            cursus tempus, arcu massa accumsan justo, non facilisis risus ante vel ex.</p>
+                    </div>
                 </div>
+                <div class="clearfix"></div>
             </div>
-
-            <div class="wow fadeInUp col-md-4 col-sm-4" data-wow-delay="0.6s">
-                <h4>Newsletter</h4>
-                <form class="newsletter" action="#" method="get">
-                    <input name="email" type="email" class="form-control" id="email" placeholder="Your Email Address">
-                    <button name="submit" value="sign-up" class='form-control'>Sign Up</button>
-                </form>
+            <div class="experience-top-grids">
+                <div class="col-md-6 experience-grid experience-grid2">
+                    <div class="experience-grid-icon icon-left hvr-radial-out">
+                        <i class="fa fa-comments" aria-hidden="true"></i>
+                    </div>
+                    <div class="experience-grid-info">
+                        <h5>Ut dapibus nisi turpis</h5>
+                        <p>Curabitur augue urna, venenatis vel enim at, sodales tempus diam. Aliquam ornare, magna a
+                            cursus tempus, arcu massa accumsan justo, non facilisis risus ante vel ex.</p>
+                    </div>
+                </div>
+                <div class="col-md-6 experience-grid experience-grid3">
+                    <div class="experience-grid-icon icon-left hvr-radial-out">
+                        <i class="fa fa-asterisk" aria-hidden="true"></i>
+                    </div>
+                    <div class="experience-grid-info">
+                        <h5>Ut dapibus nisi turpis</h5>
+                        <p>Curabitur augue urna, venenatis vel enim at, sodales tempus diam. Aliquam ornare, magna a
+                            cursus tempus, arcu massa accumsan justo, non facilisis risus ante vel ex.</p>
+                    </div>
+                </div>
+                <div class="clearfix"></div>
             </div>
-
-            <div class="col-md-12 col-sm-12 clearfix">
-                <div class="dash-line"></div>
-            </div>
-
-            <div class="wow fadeInUp col-md-6 col-sm-6" data-wow-delay="0.8s">
-                <p class="copyright-text">© 2018 All Rights Powered by Lunious<br>蜀ICP备17016272号-1</p>
-            </div>
-
-            <div class="wow fadeInUp col-md-6 col-sm-6" data-wow-delay="1s">
-                <ul class="social-icon">
-                    <li><a href="#" class="fa fa-facebook"></a></li>
-                    <li><a href="#" class="fa fa-twitter"></a></li>
-                    <li><a href="#" class="fa fa-instagram"></a></li>
-                    <li><a href="#" class="fa fa-behance"></a></li>
-                    <li><a href="#" class="fa fa-github"></a></li>
-                </ul>
-            </div>
-
         </div>
     </div>
-</footer>
+</div>
+<!-- //experience -->
+<!-- feedback -->
+<div class="jarallax feedback">
+    <div class="container">
+        <div class="w3-agileits-statistics-heading">
+            <h3>Clients Feedback</h3>
+        </div>
+        <div class="agileits-feedback-grids">
+            <div id="owl-demo" class="owl-carousel owl-theme">
+                <div class="item">
+                    <div class="feedback-info">
+                        <div class="feedback-top">
+                            <p> Sed semper leo metus, a lacinia eros semper at. Etiam sodales orci sit amet vehicula
+                                pellentesque. </p>
+                        </div>
+                        <div class="feedback-grids">
+                            <div class="feedback-img">
+                                <img src="/static/lunious/images/f1.jpg" alt=""/>
+                            </div>
+                            <div class="feedback-img-info">
+                                <h5>Peter Parker</h5>
+                                <p>Vestibulum</p>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="feedback-info">
+                        <div class="feedback-top">
+                            <p> Sed semper leo metus, a lacinia eros semper at. Etiam sodales orci sit amet vehicula
+                                pellentesque. </p>
+                        </div>
+                        <div class="feedback-grids">
+                            <div class="feedback-img">
+                                <img src="/static/lunious/images/f2.jpg" alt=""/>
+                            </div>
+                            <div class="feedback-img-info">
+                                <h5>Mary Jane</h5>
+                                <p>Vestibulum</p>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="feedback-info">
+                        <div class="feedback-top">
+                            <p> Sed semper leo metus, a lacinia eros semper at. Etiam sodales orci sit amet vehicula
+                                pellentesque. </p>
+                        </div>
+                        <div class="feedback-grids">
+                            <div class="feedback-img">
+                                <img src="/static/lunious/images/f3.jpg" alt=""/>
+                            </div>
+                            <div class="feedback-img-info">
+                                <h5>Steven Wilson</h5>
+                                <p>Vestibulum</p>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="feedback-info">
+                        <div class="feedback-top">
+                            <p> Sed semper leo metus, a lacinia eros semper at. Etiam sodales orci sit amet vehicula
+                                pellentesque. </p>
+                        </div>
+                        <div class="feedback-grids">
+                            <div class="feedback-img">
+                                <img src="/static/lunious/images/f4.jpg" alt=""/>
+                            </div>
+                            <div class="feedback-img-info">
+                                <h5>Peter Parker</h5>
+                                <p>Vestibulum</p>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            /* init Jarallax */
+            $('.jarallax').jarallax({
+                speed: 0.5,
+                imgWidth: 1366,
+                imgHeight: 768
+            })
+        </script>
 
-<!-- SCRIPTS -->
-<script src="/static/lunious/js/jquery.js"></script>
-<script src="/static/lunious/js/bootstrap.min.js"></script>
-<script src="/static/lunious/js/jquery.parallax.js"></script>
-<script src="/static/lunious/js/jquery.magnific-popup.min.js"></script>
-<script src="/static/lunious/js/magnific-popup-options.js"></script>
-<script src="/static/lunious/js/smoothscroll.js"></script>
-<script src="/static/lunious/js/wow.min.js"></script>
-<script src="/static/lunious/js/custom.js"></script>
+    </div>
+</div>
+<!-- //feedback -->
+<!-- projects -->
+<div class="projects" id="projects">
+    <div class="container">
+        <div class="w3-agileits-statistics-heading experience-heading">
+            <h3>My Projects</h3>
+        </div>
+    </div>
+    <div class="bs-example bs-example-tabs" role="tabpanel" data-example-id="togglable-tabs">
+        <ul id="myTab" class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#home-main" id="home-tab" role="tab" data-toggle="tab"
+                                                      aria-controls="home" aria-expanded="true">All</a></li>
+            <li role="presentation"><a href="#learning" role="tab" id="learning-tab" data-toggle="tab"
+                                       aria-controls="learning">Apps</a></li>
+            <li role="presentation"><a href="#playing" role="tab" id="playing-tab" data-toggle="tab"
+                                       aria-controls="playing">Widgets</a></li>
+            <li role="presentation"><a href="#painting" role="tab" id="painting-tab" data-toggle="tab"
+                                       aria-controls="painting">Templates</a></li>
+            <li role="presentation"><a href="#school" role="tab" id="school-tab" data-toggle="tab"
+                                       aria-controls="school">Other</a></li>
+        </ul>
+        <div id="myTabContent" class="tab-content">
+            <div role="tabpanel" class="tab-pane fade in active" id="home-main" aria-labelledby="home-tab">
+                <div class="w3_tab_img">
+                    <div class="col-md-3 w3_tab_img_left">
+                        <div class="demo">
+                            <a class="cm-overlay" href="/static/lunious/images/p1.jpg">
+                                <figure class="imghvr-shutter-in-out-diag-2"><img src="/static/lunious/images/p1.jpg"
+                                                                                  alt=" "
+                                                                                  class="img-responsive"/>
+                                </figure>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 w3_tab_img_left">
+                        <div class="demo">
+                            <a class="cm-overlay" href="/static/lunious/images/p2.jpg">
+                                <figure class="imghvr-shutter-in-out-diag-2"><img src="/static/lunious/images/p2.jpg"
+                                                                                  alt=" "
+                                                                                  class="img-responsive"/>
+                                </figure>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 w3_tab_img_left">
+                        <div class="demo">
+                            <a class="cm-overlay" href="/static/lunious/images/p3.jpg">
+                                <figure class="imghvr-shutter-in-out-diag-2"><img src="/static/lunious/images/p3.jpg"
+                                                                                  alt=" "
+                                                                                  class="img-responsive"/>
+                                </figure>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 w3_tab_img_left">
+                        <div class="demo">
+                            <a class="cm-overlay" href="/static/lunious/images/p4.jpg">
+                                <figure class="imghvr-shutter-in-out-diag-2"><img src="/static/lunious/images/p4.jpg"
+                                                                                  alt=" "
+                                                                                  class="img-responsive"/>
+                                </figure>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 w3_tab_img_left">
+                        <div class="demo">
+                            <a class="cm-overlay" href="/static/lunious/images/p5.jpg">
+                                <figure class="imghvr-shutter-in-out-diag-2"><img src="/static/lunious/images/p5.jpg"
+                                                                                  alt=" "
+                                                                                  class="img-responsive"/>
+                                </figure>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 w3_tab_img_left">
+                        <div class="demo">
+                            <a class="cm-overlay" href="/static/lunious/images/p6.jpg">
+                                <figure class="imghvr-shutter-in-out-diag-2"><img src="/static/lunious/images/p6.jpg"
+                                                                                  alt=" "
+                                                                                  class="img-responsive"/>
+                                </figure>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 w3_tab_img_left">
+                        <div class="demo">
+                            <a class="cm-overlay" href="/static/lunious/images/p7.jpg">
+                                <figure class="imghvr-shutter-in-out-diag-2"><img src="/static/lunious/images/p7.jpg"
+                                                                                  alt=" "
+                                                                                  class="img-responsive"/>
+                                </figure>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 w3_tab_img_left">
+                        <div class="demo">
+                            <a class="cm-overlay" href="/static/lunious/images/p8.jpg">
+                                <figure class="imghvr-shutter-in-out-diag-2"><img src="/static/lunious/images/p8.jpg"
+                                                                                  alt=" "
+                                                                                  class="img-responsive"/>
+                                </figure>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="learning" aria-labelledby="learning-tab">
+                <div class="w3_tab_img">
+                    <div class="col-md-3 w3_tab_img_left">
+                        <div class="demo">
+                            <a class="cm-overlay" href="/static/lunious/images/p6.jpg">
+                                <figure class="imghvr-shutter-in-out-diag-2"><img src="/static/lunious/images/p6.jpg"
+                                                                                  alt=" "
+                                                                                  class="img-responsive">
+                                </figure>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 w3_tab_img_left">
+                        <div class="demo">
+                            <a class="cm-overlay" href="/static/lunious/images/p9.jpg">
+                                <figure class="imghvr-shutter-in-out-diag-2"><img src="/static/lunious/images/p9.jpg"
+                                                                                  alt=" "
+                                                                                  class="img-responsive">
+                                </figure>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="playing" aria-labelledby="playing-tab">
+                <div class="w3_tab_img">
+                    <div class="col-md-3 w3_tab_img_left">
+                        <div class="demo">
+                            <a class="cm-overlay" href="/static/lunious/images/p1.jpg">
+                                <figure class="imghvr-shutter-in-out-diag-2"><img src="/static/lunious/images/p1.jpg"
+                                                                                  alt=" "
+                                                                                  class="img-responsive">
+                                </figure>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 w3_tab_img_left">
+                        <div class="demo">
+                            <a class="cm-overlay" href="/static/lunious/images/p5.jpg">
+                                <figure class="imghvr-shutter-in-out-diag-2"><img src="/static/lunious/images/p5.jpg"
+                                                                                  alt=" "
+                                                                                  class="img-responsive">
+                                </figure>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 w3_tab_img_left">
+                        <div class="demo">
+                            <a class="cm-overlay" href="/static/lunious/images/p7.jpg">
+                                <figure class="imghvr-shutter-in-out-diag-2"><img src="/static/lunious/images/p7.jpg"
+                                                                                  alt=" "
+                                                                                  class="img-responsive">
+                                </figure>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 w3_tab_img_left">
+                        <div class="demo">
+                            <a class="cm-overlay" href="/static/lunious/images/p3.jpg">
+                                <figure class="imghvr-shutter-in-out-diag-2"><img src="/static/lunious/images/p3.jpg"
+                                                                                  alt=" "
+                                                                                  class="img-responsive">
+                                </figure>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="painting" aria-labelledby="painting-tab">
+                <div class="w3_tab_img">
+                    <div class="col-md-3 w3_tab_img_left">
+                        <div class="demo">
+                            <a class="cm-overlay" href="/static/lunious/images/p2.jpg">
+                                <figure class="imghvr-shutter-in-out-diag-2"><img src="/static/lunious/images/p2.jpg"
+                                                                                  alt=" "
+                                                                                  class="img-responsive">
+                                </figure>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 w3_tab_img_left">
+                        <div class="demo">
+                            <a class="cm-overlay" href="/static/lunious/images/p4.jpg">
+                                <figure class="imghvr-shutter-in-out-diag-2"><img src="/static/lunious/images/p4.jpg"
+                                                                                  alt=" "
+                                                                                  class="img-responsive">
+                                </figure>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="col-md-3 w3_tab_img_left">
+                        <div class="demo">
+                            <a class="cm-overlay" href="/static/lunious/images/p10.jpg">
+                                <figure class="imghvr-shutter-in-out-diag-2"><img src="/static/lunious/images/p10.jpg"
+                                                                                  alt=" "
+                                                                                  class="img-responsive">
+                                </figure>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane fade" id="school" aria-labelledby="school-tab">
+                <div class="w3_tab_img">
+                    <div class="col-md-3 w3_tab_img_left">
+                        <div class="demo">
+                            <a class="cm-overlay" href="/static/lunious/images/p8.jpg">
+                                <figure class="imghvr-shutter-in-out-diag-2"><img src="/static/lunious/images/p8.jpg"
+                                                                                  alt=" "
+                                                                                  class="img-responsive">
+                                </figure>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/static/lunious/js/jquery.tools.min.js"></script>
+    <script src="/static/lunious/js/jquery.mobile.custom.min.js"></script>
+    <script src="/static/lunious/js/jquery.cm-overlay.js"></script>
+    <script>
+        $(document).ready(function () {
+            $('.cm-overlay').cmOverlay();
+        });
+    </script>
 
+</div>
+<!-- //projects -->
+<!-- map -->
+<div class="map-grid">
+    <iframe src="" class="map" style="border:0" allowfullscreen=""></iframe>
+</div>
+<!-- //map -->
+<!-- contact -->
+<div class="contact" id="contact">
+    <div class="container">
+        <div class="w3-agileits-statistics-heading experience-heading">
+            <h3>Contact Me</h3>
+        </div>
+        <div class="contact-form">
+            <form action="#" method="post">
+                <div class="fields-grid">
+                    <div class="styled-input agile-styled-input-top">
+                        <input type="text" name="Full Name" required="">
+                        <label>Full Name</label>
+                        <span></span>
+                    </div>
+                    <div class="styled-input agile-styled-input-top">
+                        <input type="text" name="Phone" required="">
+                        <label>Phone</label>
+                        <span></span>
+                    </div>
+                    <div class="styled-input">
+                        <input type="text" name="Email" required="">
+                        <label>Email</label>
+                        <span></span>
+                    </div>
+                    <div class="styled-input">
+                        <input type="text" name="Subject" required="">
+                        <label>Subject</label>
+                        <span></span>
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="styled-input textarea-grid">
+                    <textarea name="Message" required></textarea>
+                    <label>Message</label>
+                    <span></span>
+                </div>
+                <input type="submit" value="SEND">
+            </form>
+        </div>
+    </div>
+</div>
+<!-- //contact -->
+<!-- copyright -->
+<div class="agileits-w3layouts-footer">
+    <div class="container">
+        <p>Copyright &copy; 2018.Company lunious All rights reserved.<br>蜀ICP备17016272号-1 </p>
+    </div>
+</div>
+<!-- //copyright -->
+<script src="/static/lunious/js/bars.js"></script>
+<script src="/static/lunious/js/owl.carousel.js"></script>
 </body>
 </html>
