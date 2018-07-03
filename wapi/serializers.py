@@ -6,6 +6,7 @@ from .models import ScggjyList, ZakerNews
 class UserSerializer(serializers.ModelSerializer):
     class Meta:
         model = User
+        # result 接口需要返回的字段，可以指定 "__all__" 展示全部参数
         fields = ('id', 'username', 'email', 'url',)
 
 

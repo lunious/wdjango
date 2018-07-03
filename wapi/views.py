@@ -1,3 +1,6 @@
+from django_filters.rest_framework import DjangoFilterBackend
+from rest_framework.filters import SearchFilter
+
 from wapi.serializers import UserSerializer, ScggjySerializer, ZakerSerializer
 from django.contrib.auth.models import User
 from rest_framework import viewsets
@@ -18,5 +21,9 @@ class ScggjyViewSet(viewsets.ModelViewSet):
 
 
 class ZakerViewSet(viewsets.ModelViewSet):
-    queryset = ZakerNews.objects.all().order_by('-id')  # 倒序
+    queryset = ZakerNews.objects.all().order_by('-id')  # 根据id倒序
     serializer_class = ZakerSerializer
+    filter_backends = (DjangoFilterBackend, SearchFilter)
+    # 使用 title 作为另一个筛选条件
+    filter_fields = ['zType']
+    search_fields = ('zTitle',)
