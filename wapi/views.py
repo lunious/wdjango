@@ -18,5 +18,5 @@ class ScggjyViewSet(viewsets.ModelViewSet):
 
 
 class ZakerViewSet(viewsets.ModelViewSet):
-    queryset = ZakerNews.objects.all()
+    queryset = ZakerNews.objects.all().order_by('-id')  # 倒序
     serializer_class = ZakerSerializer
