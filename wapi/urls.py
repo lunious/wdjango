@@ -7,6 +7,7 @@ router = DefaultRouter()
 router.register(r'users', views.UserViewSet)
 router.register(r'scggjyList', views.ScggjyViewSet)
 router.register(r'zakerList', views.ZakerViewSet)
+router.register(r'zakerTab', views.ZakerTabViewSet)
 # The API URLs are now determined automatically by the router.
 urlpatterns = [
     url(r'^', include(router.urls))

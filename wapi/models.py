@@ -22,3 +22,13 @@ class ZakerNews(models.Model):
     class Meta:
         managed = False
         db_table = 'zaker_news'
+
+class ZakerNewsTab(models.Model):
+    code = models.IntegerField(blank=True, null=True)
+    tabName = models.CharField(db_column='tabName', max_length=20, blank=True, null=True)  # Field name made lowercase.
+
+    class Meta:
+        managed = False
+        db_table = 'zaker_news_tab'
+
+

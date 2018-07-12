@@ -1,6 +1,6 @@
 from rest_framework import serializers
 from django.contrib.auth.models import User
-from .models import ScggjyList, ZakerNews
+from .models import ScggjyList, ZakerNews, ZakerNewsTab
 
 
 class UserSerializer(serializers.ModelSerializer):
@@ -20,3 +20,9 @@ class ZakerSerializer(serializers.ModelSerializer):
     class Meta:
         model = ZakerNews
         fields = ('id', 'zTitle', 'zSubtitle', 'sSubImageLink', 'zDetailLink', 'zType',)
+
+
+class ZakerTabSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = ZakerNewsTab
+        fields = ('id', 'code', 'tabName',)
